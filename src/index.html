@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link href="../node_modules/quill/dist/quill.snow.css" rel="stylesheet">
+  <style>
+    /* layout */
+    *{margin:0;padding:0;}
+    html, body{height:100%;}
+    #container{height:100%;}
+    #headbar{height:40px;}
+    #titlebar{height:20px;}
+    #code{height:calc(100% - 60px);}
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="headbar">
+      <button>Routes</button>
+      <button>Services</button>
+    </div>
+    <div id="titlebar">
+      Title
+    </div>
+    <div id="code">
+    </div>
+  </div>
+  
+  <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+      var editor = ace.edit("code");
+      editor.setTheme("ace/theme/monokai");
+      editor.session.setMode("ace/mode/javascript");
+  </script>
+</body>
+</html>
